@@ -1,0 +1,57 @@
+# Getting the folder ready
+git init
+git config --global user.name dexdev
+git config --global user.email dexdevtech@gmail.com
+git config --global init.defaultBranch main
+
+
+# Your initial commit
+git status
+git add hi.txt
+git restore --staged hi.txt       -> brings hi.txt back to working enviroment
+git add --all || git add -A || git add .
+git commit -m "Initial Commit."
+git commit -a -m "Initial Commit."     -> bypasses staging enviroment, straight to commit
+
+
+# If you need help
+git config -h
+git help config
+
+
+# Viewing commit history
+git log
+git log -p
+git log --oneline
+
+
+# Jump back to previous version
+git log --oneline 
+    * get the identifier of the commit version, ex. c193844
+git reset c193844
+
+
+# Branches
+git branch newBranch
+git switch newBranch
+git branch 
+
+git switch main
+git merge -m "Merging the newBranch to the main branch." newBranch
+
+git branch -d newBranch
+
+
+# Remote repository
+git remote add origin <link from github> 
+git branch -M main
+git push -u origin main 
+
+# Other commands
+git rm hi.txt        -> deletes hi.txt
+git restore hi.txt    -> brings back hi.txt provided that it is monitored by git
+git mv hi.txt hello.txt 
+git diff
+git pull
+git fetch
+
